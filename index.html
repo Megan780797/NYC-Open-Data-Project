@@ -11,7 +11,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>7.3 Prac Charts(collisions)</title>
+    <title> NYC open DataSet Project( Fire Causes) </title>
     <!-- Import libraries and link files  -->
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link href="c3.css" rel="stylesheet" type="text/css" />
@@ -20,14 +20,18 @@
     <script src="helper.js"></script>  
     <script src="script.js"></script>
    </head>
+   <nav class="container" id="nav">
+      <a href="index.html">Home</a>
+        <a href="InfoPage.html">Info Page</a>
+   </nav>
   
   <body onload="init()">
     <div id="banner" class="container center">
-      <h1> Charts: Motor Vehicle Collisions </h1>
+      <h1> Charts:  Fire Causes  </h1>
     </div>
     <div class="container subbanner">
       <div>
-        <p>This practical challenges students to aggregate information of accidents stored in the <a href="https://data.cityofnewyork.us/Public-Safety/Motor-Vehicle-Collisions-Crashes/h9gi-nx95" target="_blank"> Motor Vehicle Collisions </a> dataset from NYC Open Data. Students take the information and use the <a href="https://c3js.org/">c3.js</a> JavaScript library to visualize the results as a chart.</p>
+        <p>This practical challenges students to aggregate information of accidents stored in the <a href="https://data.cityofnewyork.us/Public-Safety/Bureau-of-Fire-Investigations-Fire-Causes/ii3r-svjz/about_data" target="_blank"> Fire Causes </a> dataset from NYC Open Data. Students take the information and use the <a href="https://c3js.org/">c3.js</a> JavaScript library to visualize the results as a chart.</p>
        </div>
     </div>
     <div class="container">
@@ -42,23 +46,25 @@
         </div>
         
         <div class="card">
-          <h3>Accidents by Borough</h3>
-          <p><span class="highlight">Scenario:</span> Aggregate the number of accidents by borough and create a chart to analyze the results.</p>
-          <a class="button" onclick="accidentsByBorough()"> Show Chart </a>
+          <h3>Fire Causes  by Borough</h3>
+          <p><span class="highlight">Scenario:</span> Analyze the number of Fire Causes  by borough and create a chart to see the results.</p>
+          <a class="button" onclick="FireCausesByBorough()"> Show Chart </a>
         </div>
         
         <div class="card">
-          <h3>Accidents by Vehicle Type</h3>
-          <p><span class="highlight">Scenario:</span> Aggregate the number of accidents by vehicle type and create a chart to analyze the results.</p>
-          <a class="button" onclick="accidentsByVehicle()"> Show Chart </a>
+          <h3> Fire Causes by the type of Fire description </h3>
+          <p><span class="highlight">Scenario:</span> Analyze the  Fire Causes by the type of Fire description and create a chart to see the results.</p>
+          <a class="button" onclick="FireCausesByDescription()"> Show Chart </a>
         </div>
       </div>
+  
       
       <div class="card">
        <div id="chart"></div> <!-- div for chart -->
       </div>
     </div>
-
+ <div id="result" class="container"></div>
+        <div id="output" class="container"></div>
     <div id="footer" class="container center">
       <h3>Lesson 7.3 Prac Charts(Collisions)</h3>
     </div>  
