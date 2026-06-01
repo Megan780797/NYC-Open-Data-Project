@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<!-- Ireland website -->
-
 <html>
   <head>
+
     <title>Info about the Data Set</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
      <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -12,11 +11,26 @@
     <script src="helper.js"></script>  
     <script src="script.js"></script>
     <script src=" FireCauses.json"></script>
-
-  </head>
+ </head>
+  <body onload="init()">
+    <div id="banner" class="container center">
+      <div style="text-align:center">
+          <h1>NYC Open Data</h1>
+  <nav class="container" id="nav">
+      <a href="index.html">Home</a>
+        <a href="InfoPage.html">Info Page</a>
+        <a href="analysis.html"> Analysis/Cards</a>
+   </nav>
   <div class="banner container"> 
       <h1 style="font-size: 80pt;">Some info about the Fire Causes data set</h1>
   </div>
-  <div>
-    <h1>This data lists the causes of fires found by the Bureau of Fire Investigations. Each record represents a fire related incident investigated by BFI</h1>
-</div>
+  <div class="p">
+    <p>This data lists the causes of fires found by the Bureau of Fire Investigations. Each record represents a fire related incident investigated by BFI. This dataset contains only closed and completed cases.</p>
+
+  </div>
+<div class="card">
+          <h3>SEARCH By FireCause</h3>
+          <input type="text" id="Causeoffire" placeholder="Enter the type of Fire Cause ">
+          <hr></hr>
+</body>
+</html>
