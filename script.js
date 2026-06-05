@@ -20,10 +20,9 @@ async function init(){
    output.innerHTML = build;
 
 }
-
-function FireCausesByBorough(){
-  //Variables to keep count of accidents by borough
-  for(let i = 0; i < data.length; i++){
+// This function the types of fries but by borugh
+function FireCauseByBorough(){
+ for(let i = 0; i < data.length; i++){
     let Queens= 0, Manhattan = 0,  Staten=0, Brooklyn=0, Bronx=0;
       let fire = data[i];
       if(fire.borough == "QUEENS"){
@@ -38,39 +37,44 @@ function FireCausesByBorough(){
         else if(fire.borough == "STATEN ISLAND"){
           Staten++;
         }
+      }
         let chartData = [
     ["QUEENS",queens],
     ["MANHATTAN",manhattan],
     ["BROOKLYN", brooklyn],
     ["BRONX", bronx],
     ["STATEN ISLAND", Staten]
-  ];
-        
-      
-  }
+  ];     
 }
-  // Need to add other code for creating Charts
-  function FireCausesByCause(){
+  // the fucntion for the types of fries//
+  function FireCauseByCauseOfFire(){
      for(let i = 0; i < data.length; i++){
-      let smoking=0, fireplace=0,candle=0, electricalwiring=0,OtherLiquid=0;
-      let firecause=[i];
+      let s=0, fp=0,c=0, ew=0,ol=0;
+      let fire=[i];
       if(fire.cause=="SMOKING"){
-        smoking++;
+        s++;
       }
       else if(fire.cause=="FIREPLACE"){
-        fireplace++;
+        fp++;
       }
     else if(fire.cause=="CANDLE"){
-      candle++;
+      c++;
     }
   else if(fire.cause =="ELECTRICALWIRING"){
-    electricalwiring++;
+    ew++;
   }
   else if(fire.cause =="OTHERLIQUID"){
-    otherliquid++;
+    ol++;
   }
   }
+  let chartData=[
+    ["SMOKING", s],
+    ["FIREPLACE", fp],
+    ["CANDLE",c],
+    ["ELECTRICALWIRING",ew],
+    ["OTHERLIQUID",ol]
+  ]; 
+    let chartType = document.getElementById("chartType").value;
+    displayChart(chartData, "output", chartType );
 
-    //Creating data for chart (as array of arrays) with 1st position of array being label
-  
   }
