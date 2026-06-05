@@ -38,18 +38,39 @@ function FireCausesByBorough(){
         else if(fire.borough == "STATEN ISLAND"){
           Staten++;
         }
-        
-      
-  }
-  // Need to add other code for creating Charts
-}
-
-
-    //Creating data for chart (as array of arrays) with 1st position of array being label
-  let chartData = [
+        let chartData = [
     ["QUEENS",queens],
     ["MANHATTAN",manhattan],
     ["BROOKLYN", brooklyn],
     ["BRONX", bronx],
     ["STATEN ISLAND", Staten]
   ];
+        
+      
+  }
+}
+  // Need to add other code for creating Charts
+  function FireCausesByCause(){
+     for(let i = 0; i < data.length; i++){
+      let smoking=0, fireplace=0,candle=0, electricalwiring=0,OtherLiquid=0;
+      let firecause=[i];
+      if(fire.cause=="SMOKING"){
+        smoking++;
+      }
+      else if(fire.cause=="FIREPLACE"){
+        fireplace++;
+      }
+    else if(fire.cause=="CANDLE"){
+      candle++;
+    }
+  else if(fire.cause =="ELECTRICALWIRING"){
+    electricalwiring++;
+  }
+  else if(fire.cause =="OTHERLIQUID"){
+    otherliquid++;
+  }
+  }
+
+    //Creating data for chart (as array of arrays) with 1st position of array being label
+  
+  }
