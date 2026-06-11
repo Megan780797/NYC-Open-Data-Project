@@ -86,4 +86,5 @@ function FireCauseByBorough(){
 
     displayChart(chartData, "chart", chartType );
 
+    
   }
