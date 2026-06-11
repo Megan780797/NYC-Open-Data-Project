@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-
     <title>Analysis about the Data Set</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
      <link href="style.css" rel="stylesheet" type="text/css"/>
@@ -10,12 +9,15 @@
     <script src="d3.js"></script>
     <script src="helper.js"></script>  
     <script src="script.js"></script>
-    <script src=" FireCauses.json"></script>
  </head>
- <nav class="container" id="nav">
+
+ <body onload="init()">
+    <nav class="container" id="nav">
       <a href="index.html">Home</a>
-        <a href="InfoPage.html">Info Page</a>
-        <a href="analysis.html"> Analysis/Cards</a>
+      <a href="InfoPage.html">Info Page</a>
+      <a href="analysis.html"> Analysis/Cards</a>
+    </nav>
+
     <div id="banner" class="container center">
       <h1> Charts:  Fire Causes  </h1>
     </div>
@@ -24,6 +26,7 @@
         <p>This project challenges students to aggregate information of FireCauses stored in the <a href="https://data.cityofnewyork.us/Public-Safety/Bureau-of-Fire-Investigations-Fire-Causes/ii3r-svjz/about_data" target="_blank"> Fire Causes </a> dataset from NYC Open Data. Students take the information and use the <a href="https://c3js.org/">c3.js</a> JavaScript library to visualize the results as a chart.</p>
        </div>
     </div>
+
     <div class="container">
       <div id="panel">
         
@@ -34,6 +37,7 @@
             <option value="pie">Pie</option>
           </select>
         </div>
+
         <div class="card">
           <h3>Fire Causes  by Borough</h3>
           <p><span class="highlight">Scenario:</span> Analyze the number of Fire Causes  by borough and create a chart to see the results.</p>
@@ -44,12 +48,16 @@
           <h3> Fire Causes by the type of Fire description </h3>
           <p><span class="highlight">Scenario:</span> Analyze the  Fire Causes by the type of Fire description and create a chart to see the results.</p>
           <a class="button" onclick="FireCauseByCauseOfFire()"> Show Chart </a>
-       <div id="chartType"></div>
+          
         </div>
 
         
-      <div class="card">
-       <div id="chart"></div> <!-- div for chart -->
-      </div>
+        <div class="card">
+          <div id="chart"></div> <!-- div for chart -->
+        </div>
     </div>
-      </div>
+
+    </div>
+
+  </body>    
+</html>

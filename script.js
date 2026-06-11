@@ -18,39 +18,46 @@ async function init(){
 
   //Display cards in the div with id "leftPanel"
    output.innerHTML = build;
-
 }
-// This function the types of fries but by borugh
+
+// This function the types of fires but by borugh
 function FireCauseByBorough(){
- for(let i = 0; i < data.length; i++){
-    let Queens= 0, Manhattan = 0,  Staten=0, Brooklyn=0, Bronx=0;
+  let Queens= 0, Manhattan = 0,  Staten=0, Brooklyn=0, Bronx=0;
+ for(let i = 0; i < data.length; i++){    
       let fire = data[i];
       if(fire.borough == "QUEENS"){
         Queens++;
       } else if(fire.borough == "MANHATTAN"){
         Manhattan++;
       } else if(fire.borough == "BROOKLYN"){
-        brooklyn++;
+        Brooklyn++;
       } else if(fire.borough == "BRONX"){
-        bronx++;
-      }
-        else if(fire.borough == "STATEN ISLAND"){
+        Bronx++;
+      }else if(fire.borough == "STATEN ISLAND"){
           Staten++;
-        }
       }
-        let chartData = [
-    ["QUEENS",queens],
-    ["MANHATTAN",manhattan],
-    ["BROOKLYN", brooklyn],
-    ["BRONX", bronx],
-    ["STATEN ISLAND", Staten]
-  ];     
+  }
+
+    let chartData = [
+        ["QUEENS",Queens],
+        ["MANHATTAN",Manhattan],
+        ["BROOKLYN", Brooklyn],
+        ["BRONX", Bronx],
+        ["STATEN ISLAND", Staten]
+    ];     
+
+    let chartType = get("chartType").value;
+    
+    displayChart(chartData, "chart", chartType );
 }
-  // the fucntion for the types of fries//
+
+
+  // the fucntion for the types of fires//
   function FireCauseByCauseOfFire(){
+     let s=0, fp=0,c=0, ew=0,ol=0;
+      
      for(let i = 0; i < data.length; i++){
-      let s=0, fp=0,c=0, ew=0,ol=0;
-      let fire=[i];
+      let fire = data[i];
       if(fire.cause=="SMOKING"){
         s++;
       }
@@ -74,7 +81,9 @@ function FireCauseByBorough(){
     ["ELECTRICALWIRING",ew],
     ["OTHERLIQUID",ol]
   ]; 
-    let chartType = document.getElementById("chartType").value;
-    displayChart(chartData, "output", chartType );
+  
+    let chartType = get("chartType").value;
+
+    displayChart(chartData, "chart", chartType );
 
   }
