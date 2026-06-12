@@ -16,12 +16,3 @@ function card( info ){
     return build;
 }
 
-function displayChart( data, chart_id, chart_type ){
-  c3.generate({
-    bindto: `#${chart_id}`, // id of the div to display chart
-    data: {
-      columns: data, // data must be an array of arrays
-      type: chart_type // type of chart (pie/line/bar)
-    }
-  });
-}

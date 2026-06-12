@@ -16,10 +16,17 @@ async function init(){
       build += card(fire);    
   }
 
-  //Display cards in the div with id "leftPanel"
-   output.innerHTML = build;
+  //Display cards in the div with id "leftPanel
 }
-
+function displayChart( data, chart_id, chart_type ){
+  c3.generate({
+    bindto: `#${chart_id}`, // id of the div to display chart
+    data: {
+      columns: data, // data must be an array of arrays
+      type: chart_type // type of chart (pie/line/bar)
+    }
+  });
+}
 // This function the types of fires but by borugh
 function FireCauseByBorough(){
   let Queens= 0, Manhattan = 0,  Staten=0, Brooklyn=0, Bronx=0;
