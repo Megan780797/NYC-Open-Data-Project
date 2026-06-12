@@ -57,9 +57,9 @@ nav a:hover{
   flex:1;
   margin:10px;
   padding:10px;
-  border:1px solid gray;
+  border:1px solid red;
   text-align:center;
-  background-color: beige;
+  background-color: white;
 }
 #map{
   flex:1;
@@ -105,7 +105,7 @@ nav a:hover{
   font-style: italic;
 }
 #output{
-  background-color: tan;
+  background-color: blue;
 }
 .fitted{
   max-width:200px;
