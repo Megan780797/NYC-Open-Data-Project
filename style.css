@@ -1,6 +1,7 @@
 html,body{
   margin:0 auto;
   font-family:Arial;
+  background-color:orange
 }
 input[type=text]{
   width: 300px;
@@ -20,7 +21,7 @@ input[type=text]{
 }
 
 nav{
-  background-color:cornflowerblue;
+  background-color: aqua;
 }
 nav a{
   color:black;
@@ -30,7 +31,7 @@ nav a{
   text-align:center;
 }
 nav a:hover{
-  color:white;
+  color:red;
 }
 .subbanner{
   background-color:rgb(200,225,255);
